@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Second">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/welcometxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        app:layout_constraintStart_toEndOf="@id/guideline1"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingVertical="15dp"
+        android:layout_marginTop="35dp"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        tools:ignore="Autofill,HardcodedText,TextFields"/>
+
+    <EditText
+        android:layout_width ="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/ent_text"
+        android:hint="Enter Text"
+        app:layout_constraintStart_toEndOf="@id/guideline1"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@id/welcometxt"
+        android:paddingVertical="15dp"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        tools:ignore="Autofill,HardcodedText,TextFields" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_enter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ent_text"
+        android:paddingVertical="13dp"
+        android:paddingHorizontal="35dp"
+        android:layout_marginTop="20dp"
+        android:text="Enter"
+        android:textSize="20dp"
+        android:backgroundTint="#6D7CFF"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,SpUsage,UnusedAttribute"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnChooseColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_enter"
+        android:paddingVertical="13dp"
+        android:paddingHorizontal="35dp"
+        android:layout_marginTop="20dp"
+        android:text="Choose Color"
+        android:textSize="20dp"
+        android:backgroundTint="#6D7CFF"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,SpUsage,UnusedAttribute"
+        />
+
+    <TextView
+        android:id="@+id/coloredtxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Colored Text"
+        app:layout_constraintStart_toEndOf="@id/guideline1"
+        app:layout_constraintEnd_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/btnChooseColor"
+        android:paddingVertical="15dp"
+        android:textColor="#dcdcdc"
+        android:layout_marginTop="25dp"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        tools:ignore="Autofill,HardcodedText,TextFields"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
